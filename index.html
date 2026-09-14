@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eric's sealing machine</title>
+    <style>
+        /* 全局重置与字体 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, system-ui, -apple-system, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: #f8f9fc;
+            padding: 20px;
+        }
+
+        /* 主要内容容器 — 垂直居中 */
+        .page-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            max-width: 800px;
+            flex: 1 0 auto;
+        }
+
+        /* 标题 */
+        h1 {
+            font-size: 2.4rem;
+            font-weight: 600;
+            color: #1a2634;
+            margin-bottom: 1.8rem;
+            text-align: center;
+            letter-spacing: 0.5px;
+            border-bottom: 3px solid #e2e8f0;
+            padding-bottom: 0.6rem;
+        }
+
+        /* 名片图片容器 */
+        .card-container {
+            width: 100%;
+            max-width: 600px;
+            background: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+            padding: 20px;
+            margin-bottom: 2.5rem;
+            transition: box-shadow 0.2s ease;
+        }
+
+        .card-container img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        /* 页脚信息 — 版权 + 联系方式 */
+        .footer {
+            text-align: center;
+            font-size: 1rem;
+            color: #2d3748;
+            margin-top: 1rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #e2e8f0;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .footer .copyright {
+            font-weight: 500;
+            letter-spacing: 0.3px;
+            color: #1a202c;
+            margin-bottom: 0.6rem;
+        }
+
+        .footer .contact-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.2rem 2rem;
+            align-items: center;
+            font-size: 0.95rem;
+        }
+
+        .footer .contact-links a {
+            color: #2b6cb0;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+            border-bottom: 1px dotted transparent;
+        }
+
+        .footer .contact-links a:hover {
+            color: #1a365d;
+            border-bottom-color: #2b6cb0;
+        }
+
+        .footer .contact-links .whatsapp-link {
+            color: #25d366;
+        }
+
+        .footer .contact-links .whatsapp-link:hover {
+            color: #128c7e;
+            border-bottom-color: #25d366;
+        }
+
+        /* 移动端调整 */
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            .card-container {
+                padding: 12px;
+            }
+            .footer .contact-links {
+                flex-direction: column;
+                gap: 0.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-wrapper">
+        <!-- 页面标题 -->
+        <h1>Eric's sealing machine</h1>
+
+        <!-- 名片图片（居中） -->
+        <div class="card-container">
+            <img src="images/eric_business_card_zjlqbz.jpg" alt="Eric's business card">
+        </div>
+
+        <!-- 页脚区域 -->
+        <div class="footer">
+            <div class="copyright">
+                &copy; <span lang="en">Raypack.cn</span>. All rights reserved.
+            </div>
+            <div class="contact-links">
+                <!-- WhatsApp 链接：显示文本为 @zjlqbz，点击后打开 WhatsApp（需替换下方号码） -->
+                <a href="https://wa.me/8618368729751" target="_blank" class="whatsapp-link" rel="noopener noreferrer">
+                    &#x1F4AC; @zjlqbz
+                </a>
+                <!-- 邮箱链接 -->
+                <a href="mailto:eric@zjlqpack.com">
+                    &#9993; eric@zjlqpack.com
+                </a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
